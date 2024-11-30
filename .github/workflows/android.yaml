@@ -1,0 +1,17 @@
+name: Appium
+run-name: Testing on branch ${{github.head_ref}}
+on:
+  pull_request:
+jobs:
+  appium:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Run Appium tests on Android
+      run: npm run bstack:android
+      env: 
+        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}

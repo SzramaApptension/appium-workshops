@@ -1,0 +1,5 @@
+/node_modules
+/logs
+.env
+/apps/ios_wdio_native_app.zip
+/apps/ios_wiki.zip
