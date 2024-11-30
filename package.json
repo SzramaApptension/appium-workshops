@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "ios": "wdio run ./config/wdio.ios.conf.ts",
     "android": "wdio run ./config/wdio.android.conf.ts",
     "bstack:ios": "PLATFORM=ios wdio run ./config/wdio.browserstack.conf.ts",
